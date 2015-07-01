@@ -1,0 +1,168 @@
+﻿<html>
+<head>
+    <title>SyntaxHighlight</title>
+    <link href="/sitecore/shell/themes/standard/default/Default.css" rel="stylesheet">
+    <link href="/sitecore/shell/controls/Lib/Flexie/flex.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shcore.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/SyntaxHighlight.js"></script>
+
+    <!--Change css file to load different Theme-->
+    <link href="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/styles/shcoredefault.css" rel="stylesheet" type="text/css" />
+
+    <!--Remove unnecessary languages-->
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushAppleScript.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushAS3.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushColdFusion.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shbrushcsharp.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushDelphi.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushDiff.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushErlang.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushGroovy.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushJavaFX.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushPerl.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushPowerShell.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushRuby.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushSass.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushScala.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushVb.js"></script>
+    <script type="text/javascript" src="/sitecore modules/shell/SyntaxHighlight/syntaxhighlighter/scripts/shBrushXml.js"></script>
+    <style>
+        textarea {
+            width: 100%;
+            resize: none;
+        }
+
+        select {
+            width: initial;
+            display: initial;
+        }
+
+        #previewArea {
+            height: 90px;
+            max-height: 90px;
+            max-width: 560px;
+            overflow-y: auto;
+        }
+
+        .buttonContainer {
+            text-align: center;
+            margin: 5px;
+        }
+
+        div.hide {
+            display: none;
+        }
+
+        .syntaxhighlighter {
+            overflow-y: hidden !important;
+            overflow-x: auto !important;
+        }
+
+        ul.tabs {
+            margin-bottom: 3px;
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+            ul.tabs li {
+                display: inline;
+            }
+
+                ul.tabs li a {
+                    padding: 8px 22px;
+                }
+
+                    ul.tabs li a:hover {
+                        text-decoration: underline;
+                    }
+
+        .tip {
+            color: gray;
+        }
+
+        .input {
+            width: 50%;
+        }
+
+        .description {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <ul class="tabs">
+                <li><a href="javascript:void(0)" id="basicTabSwitch">Code</a></li>
+                <li><a href="javascript:void(0)" id="advancedTabSwitch">Advanced</a></li>
+            </ul>
+        </div>
+        <div id="basicOptions">
+            <div>
+                <fieldset>
+                    <legend>Paste source code below
+                    </legend>
+                    <textarea rows="6" id="dirtyCode"></textarea>
+                </fieldset>
+
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Options</legend>
+                    <label for="language">
+                        <span>Select Language
+                        </span>
+                    </label>
+                    <select id="language"></select>
+                    <button id="btnPreview" type="button" class="scButton">Preview</button>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Preview
+                    </legend>
+                    <div id="previewArea"></div>
+                </fieldset>
+            </div>
+            <div class="buttonContainer">
+                <button id="btnPasteCode" type="button" class="scButton scButtonPrimary">OK</button>
+                <button id="btnCancel" type="button" class="scButton">Cancel</button>
+            </div>
+        </div>
+        <div id="advancedOptions" class="hide">
+            <div>
+                <fieldset>
+                    <legend>Highlighted lines
+                    </legend>
+                    <div class="description">Allows you to highlight one or more lines to focus user’s attention</div>
+                    <input id="highlightLines" class="input" type="text" />
+                    <div class="tip">Enter a comma seperated lines numbers you want to highlight, eg 2,3,10.</div>
+                </fieldset>
+                <fieldset>
+                    <legend>Gutter
+                    </legend>
+                    <input id="gutter" type="checkbox" />
+                    Allows you to turn gutter with line numbers on and off.
+                </fieldset>
+
+                <fieldset>
+                    <legend>First line
+                    </legend>
+                    <div class="description">Allows you to change the first (starting) line number.</div>
+                    <input id="firstLine" class="input" type="text" />
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

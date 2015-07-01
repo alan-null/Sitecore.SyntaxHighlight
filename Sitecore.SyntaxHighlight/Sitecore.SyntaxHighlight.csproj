@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7470E1DD-591D-49CE-B655-C13C778FCD09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sitecore.SyntaxHighlight</RootNamespace>
+    <AssemblyName>Sitecore.SyntaxHighlight</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\serialization\core\sitecore\system\Settings\Html Editor Profiles\Rich Text Default\Toolbar 1\Code\{DCFD86D6-1B0D-4AB5-B2D9-824CF208725C}\en\1\xml" />
+    <None Include="Data\serialization\core\sitecore\system\Settings\Html Editor Profiles\Rich Text Full\Toolbar 1\Code\{423ED5DB-3C3E-42CF-A0AE-074A1B5001C9}\en\1\xml" />
+    <None Include="Data\serialization\core\sitecore\system\Settings\Html Editor Profiles\Rich Text Medium\Toolbar 1\Code\{773A3C13-2193-47EE-AF99-F546065CA55D}\en\1\xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\SyntaxHighlight.html" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\SyntaxHighlight.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\index.html" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shAutoloader.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushAS3.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushBash.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushCpp.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushCSharp.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushCss.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushDelphi.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushDiff.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushErlang.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushGroovy.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushJava.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushJScript.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushPerl.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushPhp.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushPlain.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushPython.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushRuby.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushSass.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushScala.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushSql.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushVb.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shBrushXml.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shCore.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\scripts\shLegacy.js" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shCore.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shCoreDefault.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shCoreDjango.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shCoreEclipse.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shCoreEmacs.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shCoreMDUltra.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shCoreMidnight.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shCoreRDark.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shThemeDefault.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shThemeDjango.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shThemeEclipse.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shThemeEmacs.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shThemeMDUltra.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shThemeMidnight.css" />
+    <Content Include="sitecore modules\Shell\SyntaxHighlight\syntaxhighlighter\styles\shThemeRDark.css" />
+    <Content Include="sitecore\shell\Controls\Rich Text Editor\RichText Commands.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="sitecore modules\Shell\SyntaxHighlight\debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
